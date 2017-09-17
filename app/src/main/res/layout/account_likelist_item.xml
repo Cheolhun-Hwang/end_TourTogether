@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/account_likelist_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/account_likelist_thumnail"
+                    android:layout_toEndOf="@+id/account_likelist_thumnail"
+                    android:text="대카테고리 > 중카테고리 > 소카테고리"
+                    android:textColor="@color/grey_700"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/account_point_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/account_likelist_category"
+                    android:layout_below="@+id/account_likelist_category"
+                    android:layout_marginTop="14dp"
+                    android:text="장소"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/account_point_how"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/account_likelist_thumnail"
+                    android:layout_alignStart="@+id/account_point_point"
+                    android:text="주소"
+                    android:textColor="@color/grey_700"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:id="@+id/account_likelist_thumnail"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/noimage" />
+
+                <ImageButton
+                    android:scaleType="fitXY"
+                    android:id="@+id/account_likelist_remove"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_above="@+id/account_point_how"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/alpha"
+                    android:src="@drawable/ic_remove_24dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
