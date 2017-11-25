@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/navigation_recommendation"
-        android:icon="@drawable/ic_stars_24dp"
+        android:icon="@drawable/recommend"
         android:title="추천" />
 
     <item
         android:id="@+id/navigation_column"
-        android:icon="@drawable/ic_import_contacts_24dp"
+        android:icon="@drawable/column"
         android:title="칼럼" />
 
     <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/ic_person_24dp"
+        android:icon="@drawable/ic_bottom_navi_person"
         android:title="내정보" />
-
 </menu>

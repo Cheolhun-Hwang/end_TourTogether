@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF4081</color>
-    <color name="colorPrimaryDark">#638da6</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#f6bb43</color>
+    <color name="colorPrimaryDark">#f6bb43</color>
+    <color name="colorAccent">#D50000</color>
+
+    <color name="MainThema">#f6bb43</color>
+    <color name="SubThema">#f8f2e1</color>
 
     <color name="nigiria">#638da6</color>
     <color name="white">#ffffff</color>

@@ -8,6 +8,48 @@
     android:orientation="vertical"
     tools:context="com.hchooney.qewqs.tourtogether.MainActivity">
 
+    <RelativeLayout
+        android:background="@color/SubThema"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:background="@color/alpha"
+            android:id="@+id/main_setting_btn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            app:srcCompat="@drawable/ic_settings"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="20dp" />
+
+        <ImageButton
+            android:background="@color/alpha"
+            android:id="@+id/main_gift_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/gift_vector"
+            android:layout_alignTop="@+id/main_setting_btn"
+            android:layout_toStartOf="@+id/main_setting_btn"
+            android:layout_marginEnd="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/english_app_name"
+            android:textColor="@color/MainThema"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:id="@+id/textView" />
+
+
+    </RelativeLayout>
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"

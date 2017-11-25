@@ -3,99 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_200"
-    tools:context="com.hchooney.qewqs.tourtogether.MyFragment.ColumnFragment">
+    tools:context="com.hchooney.qewqs.tourtogether.Fragment.ColumnFragment">
 
+    <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
+        android:background="@drawable/blur_js0005"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- 상단 레이아웃 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp">
-            <android.support.constraint.ConstraintLayout
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-                <!-- android:popupBackground="#61B7CF"
-                    android:background="#057D9F" -->
-                <Spinner
-                    android:entries="@array/Column_Search_Filter"
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Column_spinner"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="16dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginBottom="8dp" />
-
-                <EditText
-                    android:gravity="center"
-                    android:background="@drawable/round"
-                    android:layout_width="200dp"
-                    android:ems="50"
-                    android:singleLine="true"
-                    android:layout_height="33dp"
-                    android:id="@+id/Column_editText"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintLeft_toRightOf="@+id/Column_spinner"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintRight_toRightOf="parent" />
-
-            </android.support.constraint.ConstraintLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="@color/grey_300"
+        <RelativeLayout
+            android:background="@color/alpha"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:orientation="vertical"
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/column_recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <!-- 이벤트 레이아웃 -->
-                <LinearLayout
-                    android:id="@+id/Column_EventLayout"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </LinearLayout>
-
-                <!-- 칼럼 리스트 레이아웃 -->
-                <LinearLayout
-                    android:id="@+id/Column_ListviewLayout"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/Column_RecyclerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                </LinearLayout>
+                android:layout_height="match_parent" />
 
 
-            </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
+
+
 
     </LinearLayout>
-
 </FrameLayout>

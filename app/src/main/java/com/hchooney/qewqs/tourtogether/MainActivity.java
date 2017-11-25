@@ -1,5 +1,6 @@
 package com.hchooney.qewqs.tourtogether;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -7,23 +8,21 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
-import com.hchooney.qewqs.tourtogether.DatabaseReference.DataRef;
-import com.hchooney.qewqs.tourtogether.MyFragment.AccountFragment;
-import com.hchooney.qewqs.tourtogether.MyFragment.ColumnFragment;
-import com.hchooney.qewqs.tourtogether.MyFragment.RecommandFragment;
-import com.hchooney.qewqs.tourtogether.MyFragment.SearchFragment;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.hchooney.qewqs.tourtogether.Fragment.AccoutFragment;
+import com.hchooney.qewqs.tourtogether.Fragment.ColumnFragment;
+import com.hchooney.qewqs.tourtogether.Fragment.RecommendFragment;
+import com.hchooney.qewqs.tourtogether.Temp.BottomNavigationViewHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DataRef dataref;
-
     private FragmentManager manager;
 
-    private RecommandFragment recommandFragment;
-    private ColumnFragment columnFragment;
-    private AccountFragment accountFragment;
-
+    private ImageButton setting;
+    private ImageButton gift;
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -33,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_recommendation:
-                    switchFragment(recommandFragment);
+                    switchFragment(new RecommendFragment());
                     return true;
                 case R.id.navigation_column:
-                    switchFragment(columnFragment);
+                    switchFragment(new ColumnFragment());
                     return true;
                 case R.id.navigation_account:
-                    switchFragment(accountFragment);
+                    switchFragment(new AccoutFragment());
                     return true;
             }
             return false;
@@ -51,18 +50,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        init();
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        init();
+        BottomNavigationViewHelper.removeShiftMode(navigation);
         navigation.setSelectedItemId(R.id.navigation_recommendation);
+
     }
 
     private void init(){
-        dataref = new DataRef();
-        recommandFragment = new RecommandFragment();
-        columnFragment = new ColumnFragment();
-        accountFragment = new AccountFragment();
         manager = getSupportFragmentManager();
+
+        setting = (ImageButton) findViewById(R.id.main_setting_btn);
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+            }
+        });
+
+        gift = (ImageButton) findViewById(R.id.main_gift_btn);
+        gift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "현재 준비중인 서비스입니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void switchFragment(Fragment fragment){

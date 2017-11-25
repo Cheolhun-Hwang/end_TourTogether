@@ -28,7 +28,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/login_glading"></LinearLayout>
+                    android:background="@drawable/js001"></LinearLayout>
             </FrameLayout>
 
             <FrameLayout
@@ -39,7 +39,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/login_food"></LinearLayout>
+                    android:background="@drawable/js002"></LinearLayout>
             </FrameLayout>
 
             <FrameLayout
@@ -50,7 +50,29 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/login_mountain"></LinearLayout>
+                    android:background="@drawable/js003"></LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/Login_Frame_four"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/js004"></LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/Login_Frame_five"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/js005"></LinearLayout>
             </FrameLayout>
 
         </ViewFlipper>
@@ -86,7 +108,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/outline_pink"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -95,6 +116,7 @@
             tools:layout_editor_absoluteY="289dp">
 
             <LinearLayout
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -103,37 +125,38 @@
 
                 <TextView
                     android:id="@+id/Login_Title_textview"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:paddingLeft="20dp"
                     android:paddingTop="25dp"
                     android:text="로그인"
                     android:textColor="@color/white"
                     android:textSize="40dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <ImageButton
+                    android:padding="5dp"
+                    android:background="@color/alpha"
+                    android:id="@+id/login_google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/google" />
 
-                    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
-                        android:id="@+id/Login_naver_button"
-                        android:layout_width="250dp"
-                        android:layout_height="57dp"
-                         />
+                <ImageButton
+                    android:padding="5dp"
+                    android:background="@color/alpha"
+                    android:id="@+id/login_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/facebook" />
 
-                    <android.support.v4.widget.Space
-                        android:layout_width="match_parent"
-                        android:layout_height="15dp" />
+                <ImageButton
+                    android:padding="5dp"
+                    android:background="@color/alpha"
+                    android:id="@+id/login_naver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/naver" />
 
-                    <com.kakao.usermgmt.LoginButton
-                        android:id="@+id/Login_Kakao_button"
-                        android:layout_width="250dp"
-                        android:layout_height="57dp"
-                        ></com.kakao.usermgmt.LoginButton>
-                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
